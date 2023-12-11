@@ -28,8 +28,8 @@
                 <div class="thumbs">
                     <div class="prev"></div>
                     <div class="next"></div>
-                    <div class="thumb active">
-                        <img v-for="(image, i) in slides" :src="this.slides[activeImage].image" :key="i" :alt="slides[activeImage].image"/>
+                    <div class="thumb"  v-for="(currenThumb, i) in slides" :key="i" >
+                        <img :src="currenThumb.image" :alt="slides[activeImage].image" />
                     </div>
                 </div>
 
