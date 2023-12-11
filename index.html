@@ -30,8 +30,8 @@
                     <div class="prev" @click="prevImg"></div>
                     <div class="next"  @click="nextImg"></div>
 
-                    <div class="thumb"  v-for="(currenThumb, i) in slides" :key="i" >
-                        <img :src="currenThumb.image" :alt="currenThumb.title" :class="currenThumb === i ? 'active' : '' " />
+                    <div class="thumb"  v-for="(currenThumb, i) in slides" :key="i" :class="activeImage === i ? 'active' : '' ">
+                        <img :src="currenThumb.image" :alt="currenThumb.title" >
                     </div>
 
                 </div>
@@ -42,7 +42,7 @@
     </div>
 
     
-    
+
     <script src="script.js"></script>
 </body>
 
