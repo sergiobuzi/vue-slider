@@ -3,7 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return{
-
+            //imposto una flag che faccia partire il ciclo da 0
             activeImage: 0,
 
             slides: [
@@ -33,7 +33,7 @@ createApp({
         }
     },
 
-    methods: {
+    methods: {  //imposto le funzioni dei tasti di scorrimento con ciclo infinito
         prevImg(){
             this.activeImage--;
             if(this.activeImage < 0) {

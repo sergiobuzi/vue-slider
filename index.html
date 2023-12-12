@@ -20,18 +20,23 @@
                 <div class="item">
                     <img :src="slides[activeImage].image" :alt="slides[activeImage].image" />
                     <div class="text">
+                        <!-- metto a schermo i titoli e i testi dinamici tramite il doppio baffo -->
                         <h3>{{ slides[activeImage].title }}</h3>
                         <p>{{ slides[activeImage].text }}</p>
+
                     </div>
                 </div>
 
                 <div class="thumbs">
-
+                    <!-- do la funzione click ai bottoni e la relativa variabile -->
                     <div class="prev" @click="prevImg"></div>
                     <div class="next"  @click="nextImg"></div>
 
+                    <!-- faccio un ciclo for che mi cicli gli elementi all'interno dell'array  -->
                     <div class="thumb"  v-for="(currenThumb, i) in slides" :key="i" :class="activeImage === i ? 'active' : '' ">
+                        <!-- img prende come rifererimento l'attributo immagine dell'array che sta ciclando  -->
                         <img :src="currenThumb.image" :alt="currenThumb.title" >
+
                     </div>
 
                 </div>
